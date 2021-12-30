@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\TransactionController.cs" />
+    <Compile Include="Data\ITransactionRepository.cs" />
+    <Compile Include="Data\TransactionContext.cs" />
+    <Compile Include="Data\TransactionRepository.cs" />
+    <Compile Include="Dto\TransactionCreateDto.cs" />
+    <Compile Include="Dto\TransactionReadDto.cs" />
+    <Compile Include="ImgValidator\FaceValidator.cs" />
+    <Compile Include="ImgValidator\IFaceValidator.cs" />
+    <Compile Include="ImgValidator\ILivenessValidator.cs" />
+    <Compile Include="ImgValidator\IPassportValidator.cs" />
+    <Compile Include="ImgValidator\LivenessValidator.cs" />
+    <Compile Include="ImgValidator\PassportValidator.cs" />
+    <Compile Include="IoCConfigurator.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Profiles\TransactionProfile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Todo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
